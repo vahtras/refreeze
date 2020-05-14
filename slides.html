@@ -137,7 +137,7 @@ class: center, middle, inverse
 
 ---
 
-{{ markdown }}
+{{ markdown | safe }}
     </textarea>
 
     <script src="{{ url_for('static', filename='refreeze/js/remark-latest.min.js') }}" type="text/javascript"></script>
