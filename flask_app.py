@@ -19,7 +19,12 @@ def home():
                 js = f_js.read()
         else:
             js = ''
-        return render_template('slides.html', markdown=markdown, js=js)
+        css_file = 'talk.css'
+        if os.path.isfile(css_file):
+            css = open(css_file).read()
+        return render_template(
+            'slides.html', markdown=markdown, js=js, css=css
+        )
 
 
 if __name__ == '__main__':
