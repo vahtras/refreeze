@@ -25,5 +25,5 @@ def home():
 if __name__ == '__main__':
     BASE = ''
     port = int(os.environ.get('PORT', 5000))
-    webbrowser.open_new_tab('http://localhost:{}'.format(port))
+    webbrowser.open_new('http://localhost:{}'.format(port))
     app.run(host='0.0.0.0', port=port)
