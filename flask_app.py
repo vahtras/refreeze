@@ -13,6 +13,7 @@ def home():
     with open('talk.md', 'r') as f:
         template = Template(f.read())
         markdown = template.render(base=BASE)
+        markdown = markdown.replace('---', '---\nlayout: false', 1)
         js_file = 'talk.js'
         if os.path.isfile(js_file):
             with open(js_file, 'r') as f_js:
