@@ -22,7 +22,7 @@ def home():
             js = ''
         css_file = 'talk.css'
         if os.path.isfile(css_file):
-            css = open(css_file).read()
+            css = Template(open(css_file).read()).render(base=BASE)
         return render_template(
             'slides.html', markdown=markdown, js=js, css=css
         )
