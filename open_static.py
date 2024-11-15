@@ -22,4 +22,4 @@ def index():
 
 
 port = int(5000 + 5000*random.random())
-app.run(debug=True, port=port)
+app.run(host='0.0.0.0', debug=True, port=port)
