@@ -15,9 +15,11 @@ FREEZER_DESTINATION = os.path.join(PROJECT_ROOT, '..')
 
 # since this is a repo page (not a github user page),
 # we need to set the base_url to the correct url as per gh pages' standards
-FREEZER_BASE_URL = "http://localhost/{0}".format(REPO_NAME)
+FREEZER_BASE_URL = "http://localhost:5000/{0}".format(REPO_NAME)
 
 # IMPORTANT: if this is True, all app files
 # will be deleted when you run the freezer
 # NEVER set to True - i tried and erased one hour of work
 FREEZER_REMOVE_EXTRA_FILES = False
+
+SERVER_NAME = 'localhost:5000'
